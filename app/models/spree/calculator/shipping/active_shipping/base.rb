@@ -88,6 +88,7 @@ module Spree
 
         def valid_weight_for_package? package, max_weight
           return false if max_weight.nil?
+          return true if max_weight == 0
           package.weight <= max_weight
         end
 
